@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float 속성을 사용하여 메뉴 만들기</title>
+</head>
+<style>
+    html, body {
+        margin: 0;
+        padding: 0;
+    }
+    ul {
+        /* list의 구분자 숨기기 */
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: lightskyblue;
+    }
+    /* float을 사용하여 태그를 위로 띄워서 왼쪽 정렬 */
+    li {width: 25%;
+        float: left;
+    }
+    li a {
+        width: 100%;
+        /* a태그에 display : inline-block 을 사용하여 padding-top 과 padding-bottom을
+        정상적으로 적용하기 위함 */
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        /* a 태그의 밑줄 제거 */
+        text-decoration: none;
+    }
+    li a:hover{
+        background-color: black;
+    }
+    .active {
+        background-color: red;
+    }
+</style>
+<body>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#" class="active">About</a></li>
+    </ul>
+    
+</body>
+</html>

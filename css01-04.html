@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 셀렉터 사용하기</title>
+    <style>
+        /* 태그 선택자 */
+        /* html 태그명을 사용하는 선택자 */
+        h3, li {
+            color: brown;
+        }
+        /* class 선택자 */
+        /* html 태그의 속성 중 class의 값을 사용하여 html 태그를 선택하는 선택자 */
+        /* class의 값은 여러개를 사용할 수 있음 */
+        /* 하나의 class명을 여러개의 태그가 동시에 사용할 수 있음 */
+        /* 기호는 .을 사용함 */
+
+        .warning {
+            color: red;
+        }
+        /* class 선택자는 다른 선택자와 함께 사용하는 것이 가능함 */
+        body.main {
+            background: aliceblue;
+        }
+       /*id 선택자 */
+       /* html 태그 중 id 속성을 사용하여 지정한 태그를 선택하는 선택자 */
+       /* id속성 값은 해당 페이지 내에서 유일한 값을 가지고 있음 */
+       /* 기호는 # 을 사용 */
+        #list {
+            background: mistyrose;
+        }
+        /* 자손 셀렉터 */
+        /* 첫번째로 지정한 태그에 포함되어 있는 html 태그 중 지정한 태그를 선택하는 선택자 */
+        /* 첫번쨰로 지정한 태그에 포함되어 있기만 하면 몇단계 아래에 있던지 상관하지 않음 */
+        /* 기호는 ' ' 공백 기호를 사용함 */
+        ul strong {
+            color: dodgerblue;
+        }
+
+        /* 자식 셀렉터 */
+        /* 첫번째로 지정한 태그에 포함되어 있는 직계 자식 태그 중 지정한 태그를 선택하는 선택자 */
+        /* 기호는 > 를 사용함 */
+        div > strong {
+            background: yellow;
+        }
+        /* 전체 선택자 */
+        /* 해당 문서 내의 모든 태그를 선택하는 선택자 */
+        /* 기호는 * 을 사용 */
+
+        /* 속성 선택자 */
+        /* 지정한 태그의 속성명 및 속성값에 따라서 태그를 선택하는 선택자 */
+        /* 기호는 [속성명=속성값] 를 사용함 */
+        a {
+            display: block;
+        }
+        a[target="_blank"] {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        /* 가상 선택자 */
+        /* 태그의 상태에 따라서 스타일을 적용시킬 태그를 선택하는 선택자 */
+        /* 지정한 태그 뒤에 :가상선택자명 을 입력하여 사용함 */
+        /* hover 를 많이 사용함 */
+        h3::first-letter {
+            color: red;
+        }
+        li:hover {
+            background-color : yellowgreen;
+        }
+    </style>
+</head>
+<body class="main">
+    <h3>Web programing</h3>
+    <hr>
+    <div>
+        <div>2학기 <strong>학습내용</strong></div>
+            <ul id="list">
+                <li>HTML5</li>
+                <li><strong>CSS</strong></li>
+                <li>JavaScript</li>   
+            </ul>
+         <div class="warning">60점 이하는 F!</div>
+         <a href="#" target="_blank">속성 선택자가 지정된 하이퍼링크</a>
+         <a href="#" target="_self">속성 선택자가 지정되지 않은 하이퍼링크</a>
+    </div>
+</body>
+</html>

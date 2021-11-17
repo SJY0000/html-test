@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background: aliceblue;
+            /* 애니메이션을 실행하는 것은 animaition-name */
+            animation-name: divmove;
+            /* 애니메이션이 종료되기까지의 시간 */
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            position: relative;
+        }
+        /* 애니메이션을 적용시킨 모양 설정 */
+        @keyframes divmove {
+            0% {background: red; left: 0px; top: 0px;}
+            50% {background: green; left: 100px; top: 0px;}
+            100% {background: blue; left: 0px; top: 0px;}
+        }
+        .rainbow {
+            animation-name: rainbow;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes rainbow {
+            0% {color: black;}
+            14% {color: red;}
+            28% {color: orange;}
+            42% {color: yellow;}
+            56% {color: green;}
+            70% {color: blue;}
+            84% {color: darkblue;}
+            100% {color: purple;}
+        }
+        span {
+            font-weight: bold;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h3>keyframe 사용해보기</h3>
+    <div class="box">
+
+    </div>
+    <!-- 문제 1) 아래의 텍스트 중 span 태그 내에 있는 글자를 빨강, 주황, 노랑, 초록, 파랑, 남색, 보라 색 순으로 변경되는
+    애니메이션을 구현하세요 -->
+    <!-- 총 애니메이션 동작 시간은 5초 -->
+    <!-- kefrmae 이름은 rainbow -->
+    <p class="rainbow"><span>레인보우</span></p>
+</body>
+</html>
